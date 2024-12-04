@@ -9,10 +9,14 @@ This project is a Python script designed to analyze web server log files for cri
 1. [Objective](#objective)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Output Details](#output-details)
-6. [Evaluation Criteria](#evaluation-criteria)
-7. [Author](#author)
+4. [File Structure](#FileStructure)
+5. [Requirements](#Requirements)
+6. [Setup](#Setup)
+7. [Results](#Results)
+8. [Usage](#usage)
+9. [Output Details](#output-details)
+10. [Evaluation Criteria](#evaluation-criteria)
+11. [Author](#author)
 
 ---
 
@@ -63,6 +67,72 @@ The script implements the following functionalities:
    ```
 
 ---
+
+
+## File Structure
+
+```
+.
+├── VRV_Security_Assignment.ipynb  # Jupyter notebook with the complete solution
+├── sample.log                    # Example log file for testing
+├── log_analysis_results.csv      # Output CSV file with analysis results
+└── README.md                     # Project documentation
+```
+
+---
+
+## Requirements
+
+- **Python 3.8+**
+- Libraries:
+  - `pandas`
+  - `numpy`
+
+---
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/vrv-security-assignment.git
+   cd vrv-security-assignment
+   ```
+
+2. Install the required libraries:
+   ```bash
+   pip install pandas numpy
+   ```
+
+3. Place your log file in the project directory with the name `sample.log`.
+
+---
+
+
+## Results
+
+### Terminal Output Example:
+```
+IP Address Analysis:
+192.168.1.1 - 120 requests
+192.168.1.2 - 80 requests
+...
+
+Most Accessed Endpoint:
+/api/login - 150 requests
+
+Suspicious IPs:
+192.168.1.3 - 15 failed login attempts
+```
+
+### CSV Output:
+The CSV file `log_analysis_results.csv` will include:
+| IP Address   | Request Count | Most Accessed Endpoint | Suspicious Activity |
+|--------------|---------------|-------------------------|---------------------|
+| 192.168.1.1  | 120           | /api/data              | No                  |
+| 192.168.1.3  | 50            | /api/login             | Yes (15 attempts)   |
+
+---
+
 
 ## Usage
 1. Place the log file in the project directory.
