@@ -13,7 +13,6 @@ This project is a Python script designed to analyze web server log files for cri
 5. [Output Details](#output-details)
 6. [Evaluation Criteria](#evaluation-criteria)
 7. [Author](#author)
-8. [License](#license)
 
 ---
 
